@@ -1,47 +1,56 @@
-/* General Styling */
 body {
-    background-color: #e3f2fd;
-    font-family: Arial, sans-serif;
+    background-color: #f5f7fa;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
+    color: #333;
 }
 
 header {
-    background-color: #0288d1;
+    background-color: #2a9d8f;
     color: white;
     padding: 20px 0;
     text-align: center;
 }
 
-h1, h2 {
-    margin: 10px 0;
+h1 {
+    font-size: 2.5em;
+    margin: 0;
 }
 
 h2 {
-    color: #0288d1;
-    border-bottom: 2px solid #0288d1;
+    color: #e76f51;
+    border-bottom: 2px solid #e76f51;
     display: inline-block;
-}
-
-p, ul {
-    font-size: 18px;
-    line-height: 1.6;
-    color: #333;
+    margin-bottom: 10px;
 }
 
 section {
     margin: 20px;
     padding: 20px;
     border-radius: 10px;
-    background-color: #ffffff;
+    background-color: white; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Table Styling */
+p, ul {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 8px;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
     margin: 20px 0;
+    font-size: 16px;
 }
 
 table th, table td {
@@ -51,15 +60,18 @@ table th, table td {
 }
 
 table th {
-    background-color: #0288d1;
+    background-color: #2a9d8f; 
     color: white;
 }
 
 table tr:nth-child(even) {
-    background-color: #f2f2f2;
+    background-color: #f6f6f6; 
 }
 
-/* Image Gallery */
+table tr:nth-child(odd) {
+    background-color: #ffffff; 
+}
+
 .image-gallery {
     display: flex;
     justify-content: center;
@@ -70,20 +82,31 @@ table tr:nth-child(even) {
     max-width: 300px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .image-gallery img:hover {
     transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
 }
 
-/* Links */
 a {
-    color: #0288d1;
+    color: #264653;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 a:hover {
+    color: #e76f51; 
     text-decoration: underline;
+}
+
+footer {
+    margin-top: 20px;
+    background-color: #2a9d8f;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    border-top: 4px solid #e76f51;
 }
