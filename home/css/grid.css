@@ -1,23 +1,30 @@
-.item1 { grid-area: header; }
-.item2 { grid-area: menu; }
-.item3 { grid-area: main; }
-.item4 { grid-area: right; }
-.item5 { grid-area: footer; }
-
 .grid-container {
-  display: grid;
-  grid-template-areas:
-    'header header header header header header'
-    'menu main main main right right'
-    'menu footer footer footer footer footer';
-  gap: 10px;
-  background-color: #2196F3;
-  padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas:
+        "header header header"
+        "menu main right"
+        "menu main right"
+        "menu main right"
+        "footer footer footer";
+    gap: 20px;
+    background-color: #f0f0f0; 
 }
 
-.grid-container > div {
-  background-color: rgba(255, 255, 255, 0.8);
-  text-align: center;
-  padding: 20px 0;
-  font-size: 30px;
+.header {
+    grid-area: header;
+    text-align: center;
+    background-color: #336699;/
+    color: white;
+}
+
+.header h1 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.menu, .main, .right, .footer {
+    background-color: #e0e0e0;
+    padding: 20px;
 }
