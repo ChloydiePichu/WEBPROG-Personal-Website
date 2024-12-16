@@ -1,11 +1,11 @@
 function myFunction() {
-    document.getElementById("demo").innerHTML = "Paragraph changed.";
+    document.getElementById("demo").innerHTML = "What is my nickname";
   }
 
   function myFunction2() {
     const element = document.getElementsByTagName("p");
 
-    document.getElementById("demo").innerHTML = 'The text in first paragraph is: ' + element[0].innerHTML;
+    document.getElementById("demo").innerHTML = 'Its Chloyd! ' + element[0].innerHTML;
 
 
   }
