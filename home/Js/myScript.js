@@ -3,9 +3,9 @@ function myFunction() {
   }
 
   function myFunction2() {
-    const element = document.getElementsByTagName("p");
+    const element = document.getElementsByTagName("c");
 
-    document.getElementById("demo").innerHTML = 'Its Chloyd! ' + element[0].innerHTML;
+    document.getElementById("demo").innerHTML = 'Its' + element[0].innerHTML;
 
 
   }
