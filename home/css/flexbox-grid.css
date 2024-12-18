@@ -1,4 +1,8 @@
 body {
+    background-image: url("bluegalaxy.avif");
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center center;
     font-family: sans-serif;
     margin: 0;
     overflow-x: hidden; 
@@ -24,8 +28,8 @@ body {
 #profile-image {
     width: 150px;
     height: auto;
-    display: block;
-    margin-bottom: 20px;
+    display: block; 
+    margin: 0 auto 20px; 
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
