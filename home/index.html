@@ -3,61 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Profile</title>
     <link rel="stylesheet" href="css/flexbox-grid.css">
-    <title>Chloyd's Personal Profile</title>
 </head>
 <body>
+    <div id="container">
+        <img id="profile-image" src="Lechico HD.jpg" alt="Your Profile Picture">
+        <div id="about-me">
+            <h2>About Me</h2>
+            <p>Hello, my name is Chloyd! I am 20 years old and I am currently a 2nd year college student at APC.</p>
+            <div class="button-container">
+                <button data-target="education-popup">Education</button>
+                <button data-target="course-popup">Course</button>
+                <button data-target="it-experience-popup">IT Experience</button>
+                <button data-target="hobbies-popup">Hobbies</button>
+                <button data-target="goals-popup">Goals</button>
+                <button data-target="gallery-popup">Gallery</button>
+            </div>
+        </div>
+    </div>
 
-<div class="container">
-    <header>
-        <h1>Personal Profile Web Page</h1>
-    </header>
-    <main>
-        <section class="main-content">
-            <div>
-                <h2>About Me</h2>
-                <p>Hello, my name is Chloyd! I am 20 years old and I am currently a 2nd year college student at APC.</p>
+    <div id="education-popup" class="popup">
+        <div class="popup-content">
+            <span class="close-button" data-close="education-popup">&times;</span>
+            <h2>Education & Achievements</h2>
+            <ul>
+                <li>Dean's Lister in Asia Pacific College for A.Y. 2023-2024</li>
+                <li>Consistent top notcher from elementary to JHS</li>
+                <li>Kinder - Grade 10 - Domini Angelicus Integrated School</li>
+                <li>Grade 11 - Current - Asia Pacific College</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="course-popup" class="popup">
+        <div class="popup-content">
+            <span class="close-button" data-close="course-popup">&times;</span>
+            <h2>Course</h2>
+            <p>WEBPROG for 2nd term A.Y. 2024-2025</p>
+        </div>
+    </div>
+
+    <div id="it-experience-popup" class="popup">
+        <div class="popup-content">
+            <span class="close-button" data-close="it-experience-popup">&times;</span>
+            <h2>IT Experience</h2>
+            <table>
+                <tr><th>Experience</th><th>Date</th></tr>
+                <tr><td>Developer of iTeach</td><td>2021</td></tr>
+                <tr><td>Developed a grade calculator web app</td><td>2022</td></tr>
+                <tr><td>Developed a facility-booking mobile app</td><td>2024</td></tr>
+                <tr><td>Student specializing in I.T.</td><td>2021 - Current</td></tr>
+            </table>
+        </div>
+    </div>
+
+    <div id="hobbies-popup" class="popup">
+        <div class="popup-content">
+            <span class="close-button" data-close="hobbies-popup">&times;</span>
+            <h2>Hobbies & Interests</h2>
+            <ul>
+                <li>Dancing</li>
+                <li>Cooking</li>
+                <li>Playing video games</li>
+                <li>Taking naps</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="goals-popup" class="popup">
+        <div class="popup-content">
+            <span class="close-button" data-close="goals-popup">&times;</span>
+            <h2>Goals & Dreams</h2>
+            <p>I want to become a consistent person. Consistent in keeping myself in shape and healthy, consistent in maintaining relationships, consistent in keeping myself motivated, etc. I also aim to create a video game that I always wanted as a kid. That is the reason for my enrolment in APC.</p>
+        </div>
+    </div>
+        <div id="gallery-popup" class="popup">
+        <div class="popup-content">
+            <span class="close-button" data-close="gallery-popup">&times;</span>
+            <h2>Picture Gallery</h2>
+            <div class="image-gallery">
+                <img src="gala.jpg" alt="Image 1" width="200" height="200">
+                <img src="pc pic.jpg" alt="Image 2" width="200" height="200">
             </div>
-            <div>
-                <h2>Education & Achievements</h2>
-                <ul>
-                    <li>Dean's Lister in Asia Pacific College for A.Y. 2023-2024</li>
-                    <li>Consistent top notcher from elementary to JHS</li>
-                    <li>Kinder - Grade 10 - Domini Angelicus Integrated School</li>
-                    <li>Grade 11 - Current - Asia Pacific College</li>
-                </ul>
-            </div>
-            <div>
-                <h2>Course</h2>
-                <p>BSIT - MI231 | WEBPROG for 2nd term A.Y. 2024-2025</p>
-            </div>
-            <div>
-                <h2>IT Experience</h2>
-                <ul>
-                    <li>Created a grade calculator app in 2022</li>
-                    <li>Co-creator of iTeach, a teacher-booking website in 2021</li>
-                    <li>Developed a facility-booking mobile app in 2024</li>
-                    <li>Student Specializing in I.T, 2021 - Current</li>
-                </ul>
-            </div>
-            <div>
-                <h2>Hobbies & Interests</h2>
-                <p>Some hobbies that I almost always do are dancing, cooking, playing video games, and taking naps.</p>
-            </div>
-            <div>
-                <h2>Goals in life/Dreams</h2>
-                <p>I want to become a consistent person. Consistent in keeping myself in shape and healthy, consistent in maintaining relationships, consistent in keeping myself motivated, etc. I also aim to create a video game that I always wanted as a kid. That is the reason for my enrolment in APC.</p>
-            </div>
-            <div>
-                <h2>Picture Gallery</h2>
-                <img src="gala.jpg" alt="Image 1" width="500">
-                <img src="pc pic.jpg" alt="Image 2" width="500">
-            </div>
-        </section>
-        <aside class="sidebar">
-            </aside>
-    </main>
-    <footer>Asia Pacific College</footer>
-</div>
+        </div>
+    </div>
+
+    <script src="js/myScript.js"></script>
 </body>
 </html>
