@@ -26,5 +26,33 @@ buttons.forEach(button => {
         } else {
             displayBox.innerHTML = contentElements[targetId];
         }
+function initializeCarousel() {
+    const images = document.querySelectorAll('.carousel-image');
+    let currentIndex = 0;
+
+
+    function showImage(index) {
+        images.forEach((image, i) => {
+            image.style.display = (i === index) ? 'block' : 'none';
+        });
+    }
+
+
+    const nextButton = document.querySelector('.next-button');
+    const prevButton = document.querySelector('.prev-button');
+
+    nextButton.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % images.length;
+        showImage(currentIndex);
+    });
+
+    prevButton.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        showImage(currentIndex);
+    });
+
+
+    showImage(currentIndex);
+}
     });
 });

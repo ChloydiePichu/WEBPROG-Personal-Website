@@ -129,21 +129,65 @@ table th {
     background-color: rgba(50, 100, 150, 0.6);
     color: white;
 }
+
 .image-gallery {
     display: flex;
     justify-content: center;
     gap: 15px;
     margin-top: 10px;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
+}
+
+.carousel {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.carousel-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.5s ease; 
+}
+
+.carousel-button {
+    background-color: rgba(50, 100, 150, 0.6);
+    padding: 10px 15px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-button:hover {
+    background-color: rgba(70, 120, 170, 0.8);
+}
+
+.prev-button {
+    position: absolute;
+    left: 10px;
+}
+
+.next-button {
+    position: absolute;
+    right: 10px;
 }
 
 .image-gallery img {
-    max-width: 100%; 
+    max-width: 100%;
     height: auto;
     border-radius: 5px;
     border: 1px solid #ccc;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
+
 
 .survey-form {
     margin-top: 20px;

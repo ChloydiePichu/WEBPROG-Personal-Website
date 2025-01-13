@@ -90,12 +90,17 @@
             <h2>Goals & Dreams</h2>
             <p>I want to become a consistent person. Consistent in keeping myself in shape and healthy, consistent in maintaining relationships, consistent in keeping myself motivated, etc. I also aim to create a video game that I always wanted as a kid. That is the reason for my enrolment in APC.</p>
         </div>
-        <div id="gallery" class="hidden-content">
+    <div id="gallery" class="hidden-content">
         <h2>Picture Gallery</h2>
-        <div class="image-gallery">
-            <img src="gala.jpg" alt="Image 1">
-            <img src="pc pic.jpg" alt="Image 2">
+        <div id="carousel" class="carousel">
+            <button @click="prevImage" class="carousel-button prev-button">&#8592;</button>
+            <div class="image-gallery">
+                <img :src="images[currentImage]" :alt="'Image ' + (currentImage + 1)" class="carousel-image">
+            </div>
+            <button @click="nextImage" class="carousel-button next-button">&#8594;</button>
         </div>
+    </div>
+
     </div>
     </div>
 
