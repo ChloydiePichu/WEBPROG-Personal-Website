@@ -19,6 +19,7 @@
                 <button data-target="hobbies">Hobbies</button>
                 <button data-target="goals">Goals</button>
                 <button data-target="gallery">Gallery</button>
+                <button data-target="survey">Survey</button>
             </div>
         </div>
         <div id="display-box"></div>
@@ -58,6 +59,32 @@
                 <li>Taking naps</li>
             </ul>
         </div>
+        
+         <div id="survey" class="hidden-content">
+            <div class="survey-form">
+                <h3>Website Feedback Survey</h3>
+                <label for="suggestions">What changes would you suggest?</label>
+                <textarea id="suggestions" placeholder="Share your suggestions..."></textarea>
+
+                <label for="likes">What do you like about this website?</label>
+                <textarea id="likes" placeholder="Share your thoughts..."></textarea>
+
+                <label>Rate the design, colors, and ease of use:</label>
+                <div class="rating">
+                    <input type="radio" id="star5" name="rating" value="5">
+                    <label for="star5">&#9733;</label>
+                    <input type="radio" id="star4" name="rating" value="4">
+                    <label for="star4">&#9733;</label>
+                    <input type="radio" id="star3" name="rating" value="3">
+                    <label for="star3">&#9733;</label>
+                    <input type="radio" id="star2" name="rating" value="2">
+                    <label for="star2">&#9733;</label>
+                    <input type="radio" id="star1" name="rating" value="1">
+                    <label for="star1">&#9733;</label>
+                </div>
+
+                <button class="submit-button">Submit Feedback</button>
+            </div>
 
         <div id="goals" class="hidden-content">
             <h2>Goals & Dreams</h2>

@@ -15,7 +15,7 @@ body {
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); 
-    max-width: 700px;
+    max-width: 800px;
     text-align: center;
     backdrop-filter: blur(5px); 
     border: 1px solid rgba(255, 255, 255, 0.1); 
@@ -47,6 +47,8 @@ p, ul, table {
     justify-content: center;
     gap: 15px;
     margin-top: 25px;
+    width: 100%; 
+    box-sizing: border-box;
 }
 
 button {
@@ -61,6 +63,8 @@ button {
     border-radius: 8px;
     transition: background-color 0.3s ease;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    min-width: 120px; 
+    text-align: center;
 }
 
 button:hover {
@@ -139,4 +143,73 @@ table th {
     border-radius: 5px;
     border: 1px solid #ccc;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.survey-form {
+    margin-top: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+ .survey-form h3 {
+    color: #ccf;
+    margin-bottom: 15px;
+}
+
+.survey-form label {
+    display: block;
+    margin-bottom: 10px;
+    color: #eee;
+    font-size: 14px;
+}
+
+.survey-form input[type="text"],
+.survey-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background: #222;
+    color: #eee;
+}
+
+.survey-form textarea {
+    resize: vertical;
+}
+
+.rating {
+    display: flex;
+gap: 5px;
+    margin-bottom: 15px;
+}
+
+.rating input {
+    display: none;
+}
+
+.rating label {
+    font-size: 24px;
+    color: #666;
+    cursor: pointer;
+}
+
+.rating input:checked ~ label,
+.rating input:hover ~ label {
+    color: #ffcc00;
+}
+
+.submit-button {
+    background-color: rgba(50, 100, 150, 0.6);
+    padding: 10px 15px;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: rgba(70, 120, 170, 0.8);
 }
