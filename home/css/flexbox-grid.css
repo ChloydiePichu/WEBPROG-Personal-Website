@@ -140,44 +140,55 @@ table th {
 
 .carousel {
     position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.carousel-images {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 15px;
-    margin-top: 20px;
-    max-width: 100%;
-    overflow: hidden;
+    position: relative;
 }
 
 .carousel-image {
-    max-width: 100%;
+    display: none;
+    width: 100%;
     height: auto;
-    border-radius: 10px;
-    transition: transform 0.5s ease; 
+    border-radius: 5px;
+    transition: opacity 1s ease-in-out; 
 }
 
-.carousel-button {
-    background-color: rgba(50, 100, 150, 0.6);
-    padding: 10px 15px;
-    border: none;
+.carousel-image.active {
+    display: block;
+    opacity: 1; 
+}
+
+.prev-button, .next-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
     color: white;
+    border: none;
+    padding: 10px;
     cursor: pointer;
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
-}
-
-.carousel-button:hover {
-    background-color: rgba(70, 120, 170, 0.8);
+    border-radius: 50%;
+    font-size: 20px;
+    z-index: 1;
 }
 
 .prev-button {
-    position: absolute;
     left: 10px;
 }
 
 .next-button {
-    position: absolute;
     right: 10px;
+}
+
+.prev-button:hover, .next-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .image-gallery img {

@@ -13,7 +13,10 @@ function initializeCarousel() {
 
     function showImage(index) {
         images.forEach((image, i) => {
-            image.style.display = (i === index) ? 'block' : 'none';
+            image.classList.remove('active'); 
+            if (i === index) {
+                image.classList.add('active'); 
+            }
         });
     }
 
@@ -22,7 +25,7 @@ function initializeCarousel() {
 
     nextButton.addEventListener('click', () => {
         currentIndex = (currentIndex + 1) % images.length;
-        showImage(currentIndex);
+        showImage(currentIndex); 
     });
 
     prevButton.addEventListener('click', () => {
