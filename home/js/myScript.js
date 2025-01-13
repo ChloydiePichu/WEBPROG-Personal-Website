@@ -7,6 +7,32 @@ document.querySelectorAll('.hidden-content').forEach(element => {
     element.remove();
 });
 
+function initializeCarousel() {
+    const images = document.querySelectorAll('.carousel-image');
+    let currentIndex = 0;
+
+    function showImage(index) {
+        images.forEach((image, i) => {
+            image.style.display = (i === index) ? 'block' : 'none';
+        });
+    }
+
+    const nextButton = document.querySelector('.next-button');
+    const prevButton = document.querySelector('.prev-button');
+
+    nextButton.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % images.length;
+        showImage(currentIndex);
+    });
+
+    prevButton.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        showImage(currentIndex);
+    });
+
+    showImage(currentIndex);
+}
+
 buttons.forEach(button => {
     button.addEventListener('click', () => {
         const targetId = button.dataset.target;
@@ -23,36 +49,21 @@ buttons.forEach(button => {
 
                 alert(`Thank you for your feedback!\nSuggestions: ${suggestions}\nLikes: ${likes}\nRating: ${rating}`);
             });
+        } else if (targetId === 'gallery') {
+            const galleryContent = `
+                <div class="carousel">
+                    <button class="prev-button">❮</button>
+                    <div class="carousel-images">
+                        <img src="gala.jpg" alt="Gallery Image 1" class="carousel-image" />
+                        <img src="pc pic.jpg" alt="Gallery Image 2" class="carousel-image" />
+                    </div>
+                    <button class="next-button">❯</button>
+                </div>
+            `;
+            displayBox.innerHTML = galleryContent;
+            initializeCarousel(); 
         } else {
             displayBox.innerHTML = contentElements[targetId];
         }
-function initializeCarousel() {
-    const images = document.querySelectorAll('.carousel-image');
-    let currentIndex = 0;
-
-
-    function showImage(index) {
-        images.forEach((image, i) => {
-            image.style.display = (i === index) ? 'block' : 'none';
-        });
-    }
-
-
-    const nextButton = document.querySelector('.next-button');
-    const prevButton = document.querySelector('.prev-button');
-
-    nextButton.addEventListener('click', () => {
-        currentIndex = (currentIndex + 1) % images.length;
-        showImage(currentIndex);
-    });
-
-    prevButton.addEventListener('click', () => {
-        currentIndex = (currentIndex - 1 + images.length) % images.length;
-        showImage(currentIndex);
-    });
-
-
-    showImage(currentIndex);
-}
     });
 });
